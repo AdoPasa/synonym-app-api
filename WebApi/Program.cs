@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         policy =>
         {
-            policy.AllowAnyOrigin()//.WithOrigins(builder.Configuration.GetValue<string>("WebUIBaseUrl")!)
+            policy.WithOrigins(builder.Configuration.GetValue<string>("WebUIBaseUrl")!)
                   .AllowAnyMethod()
                   .AllowAnyHeader()
                   .AllowAnyOrigin();
